@@ -1,0 +1,27 @@
+---
+const PROJECTS = [
+    {
+        title:"Booking Clone",
+        description:'lorem ipsum',
+        link:'#',
+        github:'#',
+        image:'/projects/booking-clone.webp',
+        tags:['React.js', 'TypeScript', 'Next.js', 'Tailwind.css']
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, tags,image}) =>(
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+                {tags.map(tag => (
+                    <li>{tag}</li>
+                    ))}
+                </ul>
+                <img src={image} alt="">
+            </article>
+    ))
+}

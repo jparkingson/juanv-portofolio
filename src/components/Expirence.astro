@@ -1,0 +1,29 @@
+---
+import type { Code } from "astro:components";
+import ExpirenceItem from "./ExpirenceItem.astro";
+const Experience = [
+  {
+    date: "Junio 2022",
+    title: "Administrative Manager",
+    description:
+      "During my stay at Investment & Services BFJ, S.A. I was in charge of the Administrative part, where I carried out logistical management regarding the export and import of wines to Panama. Contributed to an automated system that helped us have better control over our customer database with 120% efficiency.",
+    link: "#",
+  },
+  {
+    date: "Junio 2023",
+    title: "Freelancer Developer",
+    description: "Customer service and improving the experience for users",
+    link: "#",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        Experience.map(experience =>(
+            <li class="mb-10 ms-4">
+            <ExpirenceItem {...experience}/>
+            </li>
+        ))
+    }
+</ol>
