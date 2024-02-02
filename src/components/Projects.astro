@@ -1,8 +1,13 @@
 ---
 import Nextjs from "../icons/Nextjs.astro";
 import Tailwind from "../icons/Tailwind.astro";
-import React from "../icons/React.astro"
-import TypeScript from "../icons/TypeScript.astro"
+import React from "../icons/React.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import HTML from "../icons/Html.astro";
+import CSS from "../icons/Css.astro";
+import PHP from "../icons/PHP.astro";
+import Links from "../icons/Links.astro";
 
 const TAGS = {
   NEXT: {
@@ -28,17 +33,22 @@ const TAGS = {
   CSS: {
     name: "CSS",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: CSS,
   },
   HTML5: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    name: "HTML 5",
+    class: "bg-[#902804] text-white",
+    icon: HTML,
   },
   JavaScript: {
     name: "JavaScript",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    class: "bg-[#889004] text-white",
+    icon: JavaScript,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#500484] text-white",
+    icon: PHP,
   },
 };
 const PROJECTS = [
@@ -51,18 +61,47 @@ const PROJECTS = [
     image: "/projects/booking-clone.webp",
     tags: [TAGS.NEXT, TAGS.Tailwind, TAGS.TypeScript, TAGS.React],
   },
+  {
+    title: "BFJ Clean",
+    description:
+      "Keeping your spaces clean and tidy is very important for health and good performance.",
+    link: "https://bfjclean.com/",
+    image: "/projects/BFJ-Clean.webp",
+    tags: [TAGS.HTML5, TAGS.CSS, TAGS.JavaScript],
+  },
+  {
+    title: "BFJ Logistics",
+    description: "logistics company in charge of cargo handling and courier",
+    link: "https://bfjlogistics.com/",
+    image: "/projects/BFJ-Logistics.webp",
+    tags: [TAGS.HTML5, TAGS.CSS, TAGS.JavaScript, TAGS.PHP],
+  },
 ];
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link }) => (
     <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <div class="flex text-center">
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2 mt-3">
+          {title}
+        </h3>
+
+        <p class="text-gray-500 dark:text-gray-400">
+          {" "}
+          <a href={link} target="_blank" class="flex pt-4 mx-2 size-6">
+            <Links />
+          </a>
+        </p>
+      </div>
+
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
           <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
               <tag.icon class="size-4" />
               {tag.name}
             </span>
