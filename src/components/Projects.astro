@@ -8,6 +8,8 @@ import HTML from "../icons/Html.astro";
 import CSS from "../icons/Css.astro";
 import PHP from "../icons/PHP.astro";
 import Links from "../icons/Links.astro";
+import OpenAI from "../icons/OpenIA.astro";
+import Azure from "../icons/Azure.astro";
 
 const TAGS = {
   NEXT: {
@@ -50,8 +52,26 @@ const TAGS = {
     class: "bg-[#500484] text-white",
     icon: PHP,
   },
+  OPENAI: {
+    name: "OpenAI",
+    class: "bg-[#05B555] text-white",
+    icon: OpenAI,
+  },
+  AZURE: {
+    name: "Azure",
+    class: "bg-[#07A1C7] text-white",
+    icon: Azure,
+  },
 };
 const PROJECTS = [
+  {
+    title: "Disney+ Clone - learning purposes",
+    description:
+      "Created for learning purposes and continuous improvement in the use of new technologies",
+    link: "https://disney-clone-rouge-chi.vercel.app/",
+    image: "/projects/Disney-clone.webp",
+    tags: [TAGS.Tailwind, TAGS.TypeScript, TAGS.React, TAGS.NEXT, TAGS.OPENAI, TAGS.AZURE],
+  },
   {
     title: "Booking Clone - learning purposes",
     description:
