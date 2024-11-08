@@ -1,23 +1,41 @@
 ---
 import ExpirenceItem from "./ExpirenceItem.astro";
-const Experience =[
+const Experience = [
   {
-    date: "Junio 2020",
+    date: "September 2024",
+    title: "Internship - ARPIA",
+    description: `
+    I lead and manage projects from start to finish using technologies such as JavaScript, jQuery and Python, focusing on the implementation and delivery of efficient solutions. 
+    I developed automations with Python and SQL that reduce up to 95% of manual tasks, improving business productivity. 
+    Additionally, I perform data analysis with SQL and Python to design and build custom applications that respond to specific client needs.
+  `,
+    link: "#",
+  },
+  {
+    date: "December 2023",
+    title: "Jr. Front-End Develope",
+    description: `
+    I build static web pages based on specific requirements using HTML, CSS and JavaScript, and develop advanced applications implementing React, Next.js, Tailwind CSS and TypeScript to optimize functionality and design. 
+    Additionally, I apply UI/UX design principles with Figma to transform illustrations into effective and functional user interfaces.
+  `,
+    link: "#",
+  },
+  {
+    date: "June 2023",
     title: "Jr. Software Developer",
     description:
       "My responsibility at BFJ Logistics was to be 100% connected with customers, offering a secure and faithful communication network between BFJ and customers. Handling exclusive requests, quotes, tracking and hardware manipulation. With my programming knowledge design, develop, and code web applications for customer accounts, which includes debugging issues diagnosing root causes, and identifying solutions",
     link: "#",
   },
- 
 ];
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
-    {
-        Experience.map(experience =>(
-            <li class="mb-10 ms-4">
-            <ExpirenceItem {...experience}/>
-            </li>
-        ))
-    }
+  {
+    Experience.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExpirenceItem {...experience} />
+      </li>
+    ))
+  }
 </ol>
